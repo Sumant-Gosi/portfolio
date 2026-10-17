@@ -1,6 +1,7 @@
 import type { Project } from "./types";
 
 // Add, remove or reorder projects here. Fill in githubUrl once a repository is public.
+// Remove `draft: true` to show a project once its text is complete.
 export const projects: Project[] = [
   {
     id: "stm32-freertos",
@@ -51,6 +52,7 @@ export const projects: Project[] = [
       de: "Restbussimulation und automatisierte Testfälle in CANoe, umgesetzt in CAPL.",
     },
     tags: ["CANoe", "CAPL", "CAN", "Rest bus simulation"],
+    draft: true,
   },
   {
     id: "uds-diagnostic-tests",
@@ -67,6 +69,7 @@ export const projects: Project[] = [
       de: "Test von Diagnosediensten nach ISO 14229 mit CANoe und vTestStudio.",
     },
     tags: ["UDS", "ISO 14229", "CANoe", "vTestStudio"],
+    draft: true,
   },
   {
     id: "adas-acc-python",
@@ -83,6 +86,7 @@ export const projects: Project[] = [
       de: "CANoe-Python-Skripte in Kombination mit PyTest, ausgeführt in einer Jenkins-CI-Pipeline.",
     },
     tags: ["Python", "PyTest", "CANoe", "Jenkins", "ADAS"],
+    draft: true,
   },
   {
     id: "infotainment-test-automation",
@@ -99,6 +103,7 @@ export const projects: Project[] = [
       de: "Automatisierte UI-Tests mit Robot Framework und Appium.",
     },
     tags: ["Robot Framework", "Appium"],
+    draft: true,
   },
   {
     id: "ml-inference-service",

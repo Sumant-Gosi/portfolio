@@ -133,4 +133,6 @@ export type Project = {
   solution: LocalizedText;
   tags: string[];
   githubUrl?: string;
+  // Hidden from the page while true, e.g. until placeholder text is filled in.
+  draft?: boolean;
 };

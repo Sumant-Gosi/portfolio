@@ -13,7 +13,9 @@ export function Projects({ locale, content }: Props) {
   return (
     <Section id="projects" index={4} title={content.title}>
       <div className="grid gap-4 md:grid-cols-2">
-        {projects.map((project) => (
+        {projects
+          .filter((project) => !project.draft)
+          .map((project) => (
           <article
             key={project.id}
             className="flex flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent"
