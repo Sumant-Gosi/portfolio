@@ -1,7 +1,6 @@
 // Absolute site URL for metadata, sitemap and Open Graph.
-// Set NEXT_PUBLIC_SITE_URL once you have a custom domain; on Vercel the production URL is used automatically.
+// Change PRODUCTION_URL when the public domain changes (or override with NEXT_PUBLIC_SITE_URL).
+const PRODUCTION_URL = "https://sumant-gosi.vercel.app";
+
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
+  process.env.NEXT_PUBLIC_SITE_URL ?? (process.env.VERCEL ? PRODUCTION_URL : "http://localhost:3000");
