@@ -1,33 +1,32 @@
 import Image from "next/image";
-import { hasProfilePhoto, PROFILE_PHOTO_PATH } from "@/lib/assets";
+import { PROFILE_PHOTO_PATH, profilePhotoSize } from "@/lib/assets";
 
 type Props = {
   name: string;
   initials: string;
 };
 
-const frame =
-  "relative size-24 shrink-0 overflow-hidden rounded-xl border border-border sm:size-28";
-
 export function Avatar({ name, initials }: Props) {
-  if (hasProfilePhoto()) {
+  const photo = profilePhotoSize();
+
+  if (photo) {
+    // Shown at the photo's own aspect ratio, so nothing is cropped.
     return (
-      <div className={frame}>
-        <Image
-          src={PROFILE_PHOTO_PATH}
-          alt={name}
-          fill
-          sizes="112px"
-          preload
-          className="object-cover"
-        />
-      </div>
+      <Image
+        src={PROFILE_PHOTO_PATH}
+        alt={name}
+        width={photo.width}
+        height={photo.height}
+        sizes="(min-width: 640px) 224px, 176px"
+        preload
+        className="h-auto w-44 rounded-xl border border-border sm:w-56"
+      />
     );
   }
 
   return (
     <div
-      className={`${frame} flex items-center justify-center bg-surface font-mono text-2xl font-medium text-accent sm:text-3xl`}
+      className="flex size-24 shrink-0 items-center justify-center rounded-xl border border-border bg-surface font-mono text-2xl font-medium text-accent sm:size-28 sm:text-3xl"
       aria-hidden="true"
     >
       {initials}

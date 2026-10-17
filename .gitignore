@@ -42,3 +42,9 @@ next-env.d.ts
 
 # private CV sources and full CV versions (contain customer names and phone number)
 /cv-source/
+
+# original photos dropped into the project root (only the cropped public/images/profile.jpg is published)
+/*.jpg
+/*.jpeg
+/*.png
+/*.heic
