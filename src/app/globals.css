@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* Light is the base. Dark applies via system preference unless the user
+   picked light, or via an explicit data-theme="dark". */
+:root {
+  color-scheme: light;
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --fg: #111614;
+  --muted: #4a5651;
+  --border: #d6dcd8;
+  --grid: rgb(17 22 20 / 0.05);
+  --accent: #0d7a3c;
+  --accent-fg: #ffffff;
+  --accent-soft: rgb(13 122 60 / 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0a0e0c;
+    --surface: #111714;
+    --fg: #e4eae6;
+    --muted: #98a59f;
+    --border: #24312b;
+    --grid: rgb(228 234 230 / 0.045);
+    --accent: #3ddc84;
+    --accent-fg: #04140b;
+    --accent-soft: rgb(61 220 132 / 0.12);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0a0e0c;
+  --surface: #111714;
+  --fg: #e4eae6;
+  --muted: #98a59f;
+  --border: #24312b;
+  --grid: rgb(228 234 230 / 0.045);
+  --accent: #3ddc84;
+  --accent-fg: #04140b;
+  --accent-soft: rgb(61 220 132 / 0.12);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Oscilloscope style graticule behind the hero. */
+.graticule {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Theme toggle shows the icon of the mode it switches to. */
+.theme-icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon-sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .theme-icon-moon {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
