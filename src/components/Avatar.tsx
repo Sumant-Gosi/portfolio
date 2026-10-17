@@ -6,8 +6,8 @@ type Props = {
   initials: string;
 };
 
-export function Avatar({ name, initials }: Props) {
-  const photo = profilePhotoSize();
+export async function Avatar({ name, initials }: Props) {
+  const photo = await profilePhotoSize();
 
   if (photo) {
     // Shown at the photo's own aspect ratio, so nothing is cropped.

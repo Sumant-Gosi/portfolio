@@ -19,7 +19,9 @@ function jpegSize(file: string): ImageSize | null {
 }
 
 // Checked at build time: drop a photo into public/images and rebuild to show it.
-export function profilePhotoSize(): ImageSize | null {
+// Cached so the file read happens once during prerendering, not on every render.
+export async function profilePhotoSize(): Promise<ImageSize | null> {
+  "use cache";
   const file = path.join(process.cwd(), "public", PROFILE_PHOTO_PATH);
   return existsSync(file) ? jpegSize(file) : null;
 }
