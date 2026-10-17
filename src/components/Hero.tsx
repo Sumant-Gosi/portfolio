@@ -23,7 +23,7 @@ export function Hero({ content }: Props) {
 
           <h1
             id="hero-name"
-            className="mt-4 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
+            className="hero-title mt-4 font-heading font-semibold tracking-tight text-balance"
           >
             {content.name}
           </h1>

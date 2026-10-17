@@ -153,6 +153,15 @@ export const en: Dictionary = {
     licenseLabel: "Driving licence",
     license: "Class B",
   },
+  hobbies: {
+    title: "Hobbies",
+    items: [
+      { id: "boardgames", name: "Board games", detail: "7 Wonders, Catan, Azul" },
+      { id: "swimming", name: "Swimming" },
+      { id: "table-tennis", name: "Table tennis" },
+      { id: "strength", name: "Strength training" },
+    ],
+  },
   contact: {
     title: "Contact",
     text: "I am open to roles across Germany. Send me an email or connect with me on LinkedIn.",

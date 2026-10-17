@@ -13,7 +13,7 @@ const secondary = `${buttonBase} border border-border bg-surface hover:border-ac
 
 export function Contact({ content }: Props) {
   return (
-    <Section id="contact" index={7} title={content.title}>
+    <Section id="contact" index={8} title={content.title}>
       <p className="max-w-2xl text-lg leading-relaxed text-pretty">{content.text}</p>
       <p className="mt-4 font-mono text-sm text-muted break-all">{profile.email}</p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">

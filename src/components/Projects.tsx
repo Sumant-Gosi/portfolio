@@ -23,7 +23,7 @@ export function Projects({ locale, content }: Props) {
             data-skill-kind="project"
             className="flex flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent"
           >
-            <h3 className="text-lg font-semibold">{project.title[locale]}</h3>
+            <h3 className="font-heading text-lg font-semibold">{project.title[locale]}</h3>
             <dl className="mt-4 space-y-3 text-sm leading-relaxed">
               <div>
                 <dt className="font-mono text-xs uppercase tracking-wider text-accent">

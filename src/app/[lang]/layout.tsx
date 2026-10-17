@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Titillium_Web } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale, locales } from "@/content";
 import { profile } from "@/content/profile";
@@ -7,16 +7,21 @@ import { siteUrl } from "@/lib/site";
 import { themeInitScript } from "@/lib/theme";
 import "../globals.css";
 
-const plexSans = IBM_Plex_Sans({
-  variable: "--font-plex-sans",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
-  weight: ["400", "500"],
+});
+
+// Headings only, so just the semibold and bold weights.
+const titillium = Titillium_Web({
+  variable: "--font-titillium",
+  subsets: ["latin"],
+  weight: ["600", "700"],
 });
 
 export function generateStaticParams() {
@@ -64,7 +69,7 @@ export default async function RootLayout({
   return (
     <html
       lang={lang}
-      className={`${plexSans.variable} ${plexMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${titillium.variable} antialiased`}
       suppressHydrationWarning
     >
       <head>

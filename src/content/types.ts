@@ -9,6 +9,7 @@ export type SectionId =
   | "projects"
   | "training"
   | "languages"
+  | "hobbies"
   | "contact";
 
 export type NavItem = {
@@ -43,6 +44,12 @@ export type CourseItem = {
   issuer?: string;
   status: string;
   inProgress?: boolean;
+};
+
+export type HobbyItem = {
+  id: "boardgames" | "swimming" | "table-tennis" | "strength";
+  name: string;
+  detail?: string;
 };
 
 export type LanguageItem = {
@@ -117,6 +124,10 @@ export type Dictionary = {
     items: LanguageItem[];
     licenseLabel: string;
     license: string;
+  };
+  hobbies: {
+    title: string;
+    items: HobbyItem[];
   };
   contact: {
     title: string;

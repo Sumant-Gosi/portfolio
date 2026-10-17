@@ -4,6 +4,7 @@ import { Contact } from "@/components/Contact";
 import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { Hobbies } from "@/components/Hobbies";
 import { Hero } from "@/components/Hero";
 import { Languages } from "@/components/Languages";
 import { Projects } from "@/components/Projects";
@@ -34,6 +35,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Projects locale={lang} content={dict.projects} />
         <Training content={dict.training} />
         <Languages content={dict.languages} />
+        <Hobbies content={dict.hobbies} />
         <Contact content={dict.contact} />
       </main>
       <Footer content={dict.footer} />

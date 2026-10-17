@@ -18,7 +18,7 @@ export function Section({ id, index, title, children }: Props) {
           <span className="font-mono text-xs text-accent" aria-hidden="true">
             {String(index).padStart(2, "0")}
           </span>
-          <h2 id={headingId} className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          <h2 id={headingId} className="section-title font-heading font-semibold tracking-tight">
             {title}
           </h2>
           <span className="h-px flex-1 self-center bg-border" aria-hidden="true" />

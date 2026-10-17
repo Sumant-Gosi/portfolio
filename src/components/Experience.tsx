@@ -25,7 +25,7 @@ export function Experience({ content }: Props) {
               aria-hidden="true"
             />
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-              <h3 className="text-lg font-semibold">
+              <h3 className="font-heading text-lg font-semibold">
                 {item.role}
                 <span className="text-muted"> · {item.company}</span>
               </h3>

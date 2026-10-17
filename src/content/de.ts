@@ -153,6 +153,15 @@ export const de: Dictionary = {
     licenseLabel: "Führerschein",
     license: "Klasse B",
   },
+  hobbies: {
+    title: "Hobbys",
+    items: [
+      { id: "boardgames", name: "Brettspiele", detail: "7 Wonders, Catan, Azul" },
+      { id: "swimming", name: "Schwimmen" },
+      { id: "table-tennis", name: "Tischtennis" },
+      { id: "strength", name: "Krafttraining" },
+    ],
+  },
   contact: {
     title: "Kontakt",
     text: "Ich bin offen für Positionen in ganz Deutschland. Schreiben Sie mir gern eine E-Mail oder vernetzen Sie sich mit mir auf LinkedIn.",

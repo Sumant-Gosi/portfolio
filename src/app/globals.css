@@ -52,8 +52,28 @@
   --color-accent: var(--accent);
   --color-accent-fg: var(--accent-fg);
   --color-accent-soft: var(--accent-soft);
-  --font-sans: var(--font-plex-sans);
-  --font-mono: var(--font-plex-mono);
+  --font-sans: var(--sans);
+  --font-mono: var(--mono);
+  --font-heading: var(--heading);
+}
+
+/* Typography: Geist for text, Geist Mono for technical labels, Titillium Web for headings. */
+:root {
+  --sans: var(--font-geist-sans);
+  --mono: var(--font-geist-mono);
+  --heading: var(--font-titillium);
+  --hero-size: clamp(2.5rem, 1.5rem + 4vw, 4.25rem);
+  --section-size: clamp(1.75rem, 1.3rem + 1.5vw, 2.5rem);
+}
+
+.hero-title {
+  font-size: var(--hero-size);
+  line-height: 1.08;
+}
+
+.section-title {
+  font-size: var(--section-size);
+  line-height: 1.2;
 }
 
 html {
