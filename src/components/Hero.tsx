@@ -1,6 +1,6 @@
 import type { Dictionary } from "@/content/types";
 import { Avatar } from "./Avatar";
-import { SignalTrace } from "./SignalTrace";
+import { Scope } from "./Scope";
 
 type Props = {
   content: Dictionary["hero"];
@@ -65,7 +65,7 @@ export function Hero({ content }: Props) {
           aria-label={content.specsLabel}
           className="rounded-xl border border-border bg-surface p-5"
         >
-          <SignalTrace />
+          <Scope message={content.scopeMessage} />
           <dl className="mt-4 divide-y divide-border font-mono text-xs">
             {content.specs.map((spec) => (
               <div key={spec.label} className="grid grid-cols-[6.5rem_1fr] gap-3 py-2.5">

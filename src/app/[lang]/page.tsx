@@ -7,14 +7,21 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Languages } from "@/components/Languages";
 import { Projects } from "@/components/Projects";
+import { SkillFocus } from "@/components/SkillFocus";
 import { Skills } from "@/components/Skills";
 import { Training } from "@/components/Training";
 import { getDictionary, hasLocale } from "@/content";
+import { projects } from "@/content/projects";
+import { evidencedSkills } from "@/lib/skills";
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = getDictionary(lang);
+  const evidenced = evidencedSkills(
+    dict.experience.items,
+    projects.filter((project) => !project.draft),
+  );
 
   return (
     <>
@@ -22,7 +29,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <main id="top">
         <Hero content={dict.hero} />
         <About content={dict.about} />
-        <Skills locale={lang} content={dict.skills} />
+        <Skills locale={lang} content={dict.skills} evidenced={evidenced} />
         <Experience content={dict.experience} />
         <Projects locale={lang} content={dict.projects} />
         <Training content={dict.training} />
@@ -30,6 +37,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Contact content={dict.contact} />
       </main>
       <Footer content={dict.footer} />
+      <SkillFocus content={dict.skills.focus} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { projects } from "@/content/projects";
 import type { Dictionary, Locale } from "@/content/types";
+import { skillKeys } from "@/lib/skills";
 import { GitHubIcon } from "./GitHubIcon";
 import { Section } from "./Section";
 import { TagList } from "./TagList";
@@ -18,6 +19,8 @@ export function Projects({ locale, content }: Props) {
           .map((project) => (
           <article
             key={project.id}
+            data-skills={skillKeys(project.tags)}
+            data-skill-kind="project"
             className="flex flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent"
           >
             <h3 className="text-lg font-semibold">{project.title[locale]}</h3>

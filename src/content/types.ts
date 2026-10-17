@@ -74,6 +74,8 @@ export type Dictionary = {
     cvFile: string;
     specsLabel: string;
     specs: Spec[];
+    // ASCII text, max 8 characters: encoded as the CAN frame in the hero trace.
+    scopeMessage: string;
   };
   about: {
     title: string;
@@ -81,6 +83,14 @@ export type Dictionary = {
   };
   skills: {
     title: string;
+    hint: string;
+    focus: {
+      usedIn: string;
+      roles: [string, string];
+      projects: [string, string];
+      show: string;
+      clear: string;
+    };
   };
   experience: {
     title: string;

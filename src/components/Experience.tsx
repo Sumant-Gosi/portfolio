@@ -1,4 +1,5 @@
 import type { Dictionary } from "@/content/types";
+import { skillKeys } from "@/lib/skills";
 import { Section } from "./Section";
 import { TagList } from "./TagList";
 
@@ -11,7 +12,12 @@ export function Experience({ content }: Props) {
     <Section id="experience" index={3} title={content.title}>
       <ol className="relative space-y-12 border-l border-border pl-6 sm:pl-8">
         {content.items.map((item) => (
-          <li key={`${item.company}-${item.period}`} className="relative">
+          <li
+            key={`${item.company}-${item.period}`}
+            data-skills={skillKeys(item.tags)}
+            data-skill-kind="role"
+            className="relative"
+          >
             <span
               className={`absolute top-1.5 -left-[1.95rem] size-3 rounded-full border-2 sm:-left-[2.45rem] ${
                 item.current ? "border-accent bg-accent" : "border-border bg-bg"

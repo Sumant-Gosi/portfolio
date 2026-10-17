@@ -38,6 +38,7 @@ export const de: Dictionary = {
       { label: "Standards", value: "AUTOSAR · ASPICE · ISO 26262" },
       { label: "Protokolle", value: "CAN FD · UDS · XCP · DoIP" },
     ],
+    scopeMessage: "HALLO!",
   },
   about: {
     title: "Profil",
@@ -50,6 +51,14 @@ export const de: Dictionary = {
   },
   skills: {
     title: "Kenntnisse",
+    hint: "Wählen Sie eine Kenntnis aus, um zu sehen, wo ich sie eingesetzt habe.",
+    focus: {
+      usedIn: "eingesetzt in",
+      roles: ["Position", "Positionen"],
+      projects: ["Projekt", "Projekten"],
+      show: "Anzeigen",
+      clear: "Auswahl aufheben",
+    },
   },
   experience: {
     title: "Berufserfahrung",
