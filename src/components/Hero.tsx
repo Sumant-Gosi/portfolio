@@ -1,6 +1,6 @@
+import Image from "next/image";
 import type { Dictionary } from "@/content/types";
 import { Avatar } from "./Avatar";
-import { Scope } from "./Scope";
 
 type Props = {
   content: Dictionary["hero"];
@@ -12,7 +12,7 @@ const buttonBase =
 export function Hero({ content }: Props) {
   return (
     <section aria-labelledby="hero-name" className="graticule border-b border-border">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1fr_22rem] lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:items-center">
         <div>
           <Avatar name={content.name} initials={content.initials} />
 
@@ -63,10 +63,18 @@ export function Hero({ content }: Props) {
 
         <aside
           aria-label={content.specsLabel}
-          className="rounded-xl border border-border bg-surface p-5"
+          className="overflow-hidden rounded-xl border border-border bg-surface"
         >
-          <Scope message={content.scopeMessage} />
-          <dl className="mt-4 divide-y divide-border font-mono text-xs">
+          <Image
+            src="/images/ecu-network.jpg"
+            alt={content.imageAlt}
+            width={1536}
+            height={1024}
+            sizes="(min-width: 1024px) 560px, 100vw"
+            preload
+            className="h-auto w-full border-b border-border"
+          />
+          <dl className="divide-y divide-border px-5 py-2 font-mono text-xs">
             {content.specs.map((spec) => (
               <div key={spec.label} className="grid grid-cols-[6.5rem_1fr] gap-3 py-2.5">
                 <dt className="uppercase tracking-wider text-muted">{spec.label}</dt>

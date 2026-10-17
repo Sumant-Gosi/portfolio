@@ -81,8 +81,7 @@ export type Dictionary = {
     cvFile: string;
     specsLabel: string;
     specs: Spec[];
-    // ASCII text, max 8 characters: encoded as the CAN frame in the hero trace.
-    scopeMessage: string;
+    imageAlt: string;
   };
   about: {
     title: string;

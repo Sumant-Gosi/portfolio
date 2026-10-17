@@ -117,40 +117,6 @@ body {
   }
 }
 
-/* Hero scope: the trace sweeps in once, then scrolls slowly like a live capture. */
-.scope-sweep {
-  animation: scope-sweep 1.4s ease-out both;
-}
-
-.scope-scroll {
-  animation: scope-scroll 16s linear 1.4s infinite;
-}
-
-.scope-rx {
-  animation: scope-blink 1.6s steps(2, jump-none) infinite;
-}
-
-@keyframes scope-sweep {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes scope-scroll {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes scope-blink {
-  to {
-    opacity: 0.25;
-  }
-}
-
 /* Skill focus: set by SkillFocus. Matching jobs and projects stay, the rest fades. */
 [data-skills] {
   transition:
@@ -181,11 +147,5 @@ body {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
-  }
-
-  .scope-sweep,
-  .scope-scroll,
-  .scope-rx {
-    animation: none;
   }
 }

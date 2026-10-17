@@ -38,7 +38,8 @@ export const en: Dictionary = {
       { label: "Standards", value: "AUTOSAR · ASPICE · ISO 26262" },
       { label: "Protocols", value: "CAN FD · UDS · XCP · DoIP" },
     ],
-    scopeMessage: "HIRE ME",
+    imageAlt:
+      "X-ray view of a sedan showing its ECU network: engine, body, transmission, gateway and ABS ECUs connected by bus lines",
   },
   about: {
     title: "About",

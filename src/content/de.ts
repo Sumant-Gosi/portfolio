@@ -38,7 +38,8 @@ export const de: Dictionary = {
       { label: "Standards", value: "AUTOSAR · ASPICE · ISO 26262" },
       { label: "Protokolle", value: "CAN FD · UDS · XCP · DoIP" },
     ],
-    scopeMessage: "HALLO!",
+    imageAlt:
+      "Röntgenansicht einer Limousine mit ihrem Steuergerätenetzwerk: Motor-, Karosserie-, Getriebe-, Gateway- und ABS-Steuergerät, verbunden über Busleitungen",
   },
   about: {
     title: "Profil",
