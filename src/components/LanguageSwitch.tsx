@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { localeNames, locales } from "@/content";
 import type { Locale } from "@/content/types";
 
@@ -15,7 +14,9 @@ export function LanguageSwitch({ current, label }: Props) {
           const active = locale === current;
           return (
             <li key={locale}>
-              <Link
+              {/* A plain link on purpose: a full page load starts the other language at the top
+                  and avoids keeping the previous language mounted (hidden) in the page. */}
+              <a
                 href={`/${locale}`}
                 hrefLang={locale}
                 lang={locale}
@@ -28,7 +29,7 @@ export function LanguageSwitch({ current, label }: Props) {
                 }`}
               >
                 {locale}
-              </Link>
+              </a>
             </li>
           );
         })}
