@@ -7,36 +7,39 @@ type Props = {
 };
 
 const buttonBase =
-  "inline-flex h-11 items-center justify-center gap-2 rounded-md px-5 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "inline-flex h-12 items-center justify-center gap-2 rounded-lg px-6 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 export function Hero({ content }: Props) {
   return (
     <section aria-labelledby="hero-name" className="graticule border-b border-border">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1fr_1.05fr] lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-14 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center">
         <div>
-          <Avatar name={content.name} initials={content.initials} />
-
-          <p className="mt-8 flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-accent">
-            <span className="size-2 rounded-full bg-accent" aria-hidden="true" />
-            {content.availability}
-          </p>
+          <div className="flex items-center gap-4">
+            <Avatar name={content.name} initials={content.initials} />
+            <p className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent-soft px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-accent">
+              <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
+              {content.availability}
+            </p>
+          </div>
 
           <h1
             id="hero-name"
-            className="hero-title mt-4 font-heading font-semibold tracking-tight text-balance"
+            className="hero-title mt-8 font-heading font-bold tracking-tight text-balance"
           >
             {content.name}
           </h1>
-          <p className="mt-3 font-mono text-sm text-muted sm:text-base">{content.title}</p>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-pretty">
+          <p className="mt-3 font-heading text-xl font-semibold text-fg/80 sm:text-2xl">
+            {content.title}
+          </p>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted text-pretty">
             {content.summary}
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
               href={content.cvFile}
               download
-              className={`${buttonBase} bg-accent text-accent-fg hover:opacity-90`}
+              className={`${buttonBase} bg-accent text-accent-fg shadow-lg shadow-accent/20 hover:-translate-y-0.5 hover:shadow-accent/30`}
             >
               <svg
                 className="size-4"
@@ -54,16 +57,28 @@ export function Hero({ content }: Props) {
             </a>
             <a
               href="#contact"
-              className={`${buttonBase} border border-border bg-surface hover:border-accent hover:text-accent`}
+              className={`${buttonBase} border border-border text-fg hover:border-accent hover:text-accent`}
             >
               {content.contact}
+              <svg
+                className="size-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
             </a>
           </div>
         </div>
 
         <aside
           aria-label={content.specsLabel}
-          className="overflow-hidden rounded-xl border border-border bg-surface"
+          className="overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl shadow-black/10"
         >
           <Image
             src="/images/ecu-network.jpg"

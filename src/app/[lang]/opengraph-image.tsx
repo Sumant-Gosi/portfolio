@@ -34,18 +34,18 @@ export default async function OpengraphImage({ params }: { params: Promise<{ lan
           alignItems: "center",
           gap: 40,
           padding: "0 48px 0 64px",
-          background: "#0a0e0c",
-          color: "#e4eae6",
+          background: "#0b1220",
+          color: "#e6edf6",
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", width: 330 }}>
-          <div style={{ fontSize: 18, color: "#3ddc84", letterSpacing: 2, lineHeight: 1.4 }}>
+          <div style={{ fontSize: 18, color: "#5cc8e2", letterSpacing: 2, lineHeight: 1.4 }}>
             {hero.availability.toUpperCase()}
           </div>
           <div style={{ fontSize: 56, fontWeight: 700, marginTop: 18, lineHeight: 1.05 }}>
             {hero.name}
           </div>
-          <div style={{ fontSize: 24, color: "#98a59f", marginTop: 18, lineHeight: 1.3 }}>
+          <div style={{ fontSize: 24, color: "#94a3b8", marginTop: 18, lineHeight: 1.3 }}>
             {hero.title}
           </div>
         </div>
@@ -54,7 +54,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ lan
           alt=""
           width={714}
           height={476}
-          style={{ borderRadius: 16, border: "2px solid #24312b" }}
+          style={{ borderRadius: 16, border: "2px solid #1e2a40" }}
         />
       </div>
     ),

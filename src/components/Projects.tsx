@@ -21,7 +21,7 @@ export function Projects({ locale, content }: Props) {
             key={project.id}
             data-skills={skillKeys(project.tags)}
             data-skill-kind="project"
-            className="flex flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent"
+            className="flex flex-col rounded-2xl border border-border bg-surface p-7 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/60"
           >
             <h3 className="font-heading text-lg font-semibold">{project.title[locale]}</h3>
             <dl className="mt-4 space-y-3 text-sm leading-relaxed">

@@ -18,15 +18,13 @@ export function Skills({ locale, content, evidenced }: Props) {
         <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
         {content.hint}
       </p>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="divide-y divide-border border-y border-border">
         {skillGroups.map((group) => (
           <article
             key={group.id}
-            className="rounded-xl border border-border bg-surface p-5 transition-colors hover:border-accent"
+            className="grid gap-3 py-5 md:grid-cols-[15rem_1fr] md:items-baseline md:gap-12"
           >
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-wider text-accent">
-              {group.title[locale]}
-            </h3>
+            <h3 className="font-heading text-base font-semibold">{group.title[locale]}</h3>
             <ul className="flex flex-wrap gap-1.5">
               {group.items.map((item) => {
                 const key = skillKey(item);

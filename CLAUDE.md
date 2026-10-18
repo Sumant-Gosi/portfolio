@@ -21,8 +21,8 @@ They spend under a minute on the page. Within that time they should understand: 
 ## Design direction
 - Clean, technical, engineering feel. Think datasheet or oscilloscope, not startup landing page.
 - Dark mode and light mode, following system preference, with a toggle.
-- One accent color (e.g. signal green or amber, like a CAN trace or an oscilloscope line).
-- Monospace font for small technical labels (protocol names, tool tags), a clean sans serif for body text.
+- Deep navy base with one muted cyan accent (light mode: off-white with a teal-cyan accent). Use the accent only for buttons, links, active navigation and a few highlights.
+- Fonts: Titillium Web for headings, Geist for body text, Geist Mono for small technical labels (protocol names, tool tags).
 - Fully responsive. Must look good on a phone, because recruiters often open links from LinkedIn on mobile.
 
 ## Page sections (single page with anchor navigation)

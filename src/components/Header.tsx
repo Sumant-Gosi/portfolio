@@ -1,5 +1,6 @@
 import type { Dictionary, Locale } from "@/content/types";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { NavSpy } from "./NavSpy";
 import { ThemeToggle } from "./ThemeToggle";
 
 type Props = {
@@ -7,13 +8,14 @@ type Props = {
   content: Dictionary["header"];
 };
 
+// The underline marks the section in view; NavSpy sets aria-current on scroll.
 const linkClass =
-  "whitespace-nowrap rounded px-1 py-1 text-sm text-muted transition-colors hover:text-fg focus-visible:outline-2 focus-visible:outline-accent";
+  "relative whitespace-nowrap rounded px-1 py-1 text-sm text-muted transition-colors duration-200 hover:text-fg focus-visible:outline-2 focus-visible:outline-accent after:absolute after:inset-x-1 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-accent after:transition-transform after:duration-300 aria-[current=location]:text-fg aria-[current=location]:after:scale-x-100";
 
 export function Header({ locale, content }: Props) {
   const navLinks = content.nav.map((item) => (
     <li key={item.id}>
-      <a href={`#${item.id}`} className={linkClass}>
+      <a href={`#${item.id}`} data-nav={item.id} className={linkClass}>
         {item.label}
       </a>
     </li>
@@ -42,10 +44,11 @@ export function Header({ locale, content }: Props) {
 
       {/* Below lg: a horizontally scrollable row instead of a JS menu. */}
       <nav aria-label={content.navLabel} className="border-t border-border lg:hidden">
-        <ul className="mx-auto flex max-w-6xl gap-4 overflow-x-auto px-4 py-2">
+        <ul data-nav-row className="mx-auto flex max-w-6xl gap-4 overflow-x-auto px-4 py-2.5 [scrollbar-width:none]">
           {navLinks}
         </ul>
       </nav>
+      <NavSpy />
     </header>
   );
 }
