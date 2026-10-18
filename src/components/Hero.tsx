@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Dictionary } from "@/content/types";
 import { Avatar } from "./Avatar";
 
@@ -25,12 +24,9 @@ export function Hero({ content }: Props) {
     <section aria-labelledby="hero-name" className="graticule border-b border-border">
       <div className="mx-auto grid max-w-6xl gap-14 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center">
         <div>
-          <div className="flex items-center gap-4">
-            <Avatar name={content.name} initials={content.initials} />
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-              {content.title}
-            </p>
-          </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+            {content.title}
+          </p>
 
           <h1
             id="hero-name"
@@ -88,33 +84,7 @@ export function Hero({ content }: Props) {
           aria-label={content.specsLabel}
           className="rounded-2xl border border-border bg-surface p-4 shadow-2xl shadow-black/10 sm:p-5"
         >
-          <div className="flex items-center gap-3 px-1">
-            <span className="inline-flex size-9 items-center justify-center rounded-lg bg-accent-soft text-accent">
-              <svg {...iconProps} className="size-5">
-                <rect x="7" y="7" width="10" height="10" rx="1.5" />
-                <path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4" />
-              </svg>
-            </span>
-            <div>
-              <p className="font-heading text-base font-semibold">{content.card.title}</p>
-              <p className="text-xs text-muted">{content.card.subtitle}</p>
-            </div>
-          </div>
-
-          <div className="mt-4 rounded-xl border border-border bg-bg/60 p-3">
-            <p className="mb-2.5 px-1 font-mono text-[11px] uppercase tracking-wider text-muted">
-              {content.card.label}
-            </p>
-            <Image
-              src="/images/ecu-network.jpg"
-              alt={content.imageAlt}
-              width={1536}
-              height={1024}
-              sizes="(min-width: 1024px) 520px, 100vw"
-              preload
-              className="h-auto w-full rounded-lg"
-            />
-          </div>
+          <Avatar name={content.name} initials={content.initials} />
 
           <dl className="mt-3 divide-y divide-border px-1 font-mono text-xs">
             {content.specs.map((spec) => (

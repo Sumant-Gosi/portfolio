@@ -17,16 +17,16 @@ export async function Avatar({ name, initials }: Props) {
         alt={name}
         width={photo.width}
         height={photo.height}
-        sizes="(min-width: 640px) 128px, 112px"
+        sizes="(min-width: 1024px) 520px, 100vw"
         preload
-        className="h-auto w-28 shrink-0 rounded-lg border border-border sm:w-32"
+        className="h-auto w-full rounded-xl"
       />
     );
   }
 
   return (
     <div
-      className="flex size-16 shrink-0 items-center justify-center rounded-lg border border-border bg-surface font-mono text-xl font-medium text-accent"
+      className="flex aspect-[4/3] w-full items-center justify-center rounded-xl bg-bg font-mono text-6xl font-medium text-accent"
       aria-hidden="true"
     >
       {initials}

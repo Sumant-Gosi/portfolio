@@ -39,13 +39,6 @@ export const de: Dictionary = {
       { label: "Standards", value: "AUTOSAR · ASPICE · ISO 26262" },
       { label: "Protokolle", value: "CAN FD · UDS · XCP · DoIP" },
     ],
-    card: {
-      title: "Embedded-Systeme im Fahrzeug",
-      subtitle: "Hardware · Software · Integration",
-      label: "Steuergerätenetzwerk",
-    },
-    imageAlt:
-      "Röntgenansicht einer Limousine mit ihrem Steuergerätenetzwerk: Motor-, Karosserie-, Getriebe-, Gateway- und ABS-Steuergerät, verbunden über Busleitungen",
   },
   about: {
     title: "Profil",
@@ -157,8 +150,6 @@ export const de: Dictionary = {
       { name: "Englisch", level: "C1" },
       { name: "Deutsch", level: "B2", note: "telc-zertifiziert, C1.2-Kurs laufend" },
     ],
-    licenseLabel: "Führerschein",
-    license: "Klasse B",
   },
   hobbies: {
     title: "Hobbys",
@@ -172,6 +163,10 @@ export const de: Dictionary = {
   contact: {
     title: "Kontakt",
     text: "Ich bin offen für Positionen in ganz Deutschland. Schreiben Sie mir gern eine E-Mail oder vernetzen Sie sich mit mir auf LinkedIn.",
+    details: [
+      { label: "Standort", value: "Böblingen" },
+      { label: "Führerschein", value: "Klasse B" },
+    ],
     emailLabel: "E-Mail schreiben",
     linkedinLabel: "LinkedIn",
     githubLabel: "GitHub",

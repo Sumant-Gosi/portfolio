@@ -39,13 +39,6 @@ export const en: Dictionary = {
       { label: "Standards", value: "AUTOSAR · ASPICE · ISO 26262" },
       { label: "Protocols", value: "CAN FD · UDS · XCP · DoIP" },
     ],
-    card: {
-      title: "Embedded automotive systems",
-      subtitle: "Hardware · Software · Integration",
-      label: "ECU network",
-    },
-    imageAlt:
-      "X-ray view of a sedan showing its ECU network: engine, body, transmission, gateway and ABS ECUs connected by bus lines",
   },
   about: {
     title: "About",
@@ -157,8 +150,6 @@ export const en: Dictionary = {
       { name: "English", level: "C1" },
       { name: "German", level: "B2", note: "telc certified, C1.2 course in progress" },
     ],
-    licenseLabel: "Driving licence",
-    license: "Class B",
   },
   hobbies: {
     title: "Hobbies",
@@ -172,6 +163,10 @@ export const en: Dictionary = {
   contact: {
     title: "Contact",
     text: "I am open to roles across Germany. Send me an email or connect with me on LinkedIn.",
+    details: [
+      { label: "Location", value: "Böblingen, Germany" },
+      { label: "Driving licence", value: "Class B" },
+    ],
     emailLabel: "Send an email",
     linkedinLabel: "LinkedIn",
     githubLabel: "GitHub",

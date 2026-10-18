@@ -82,12 +82,6 @@ export type Dictionary = {
     cvFile: string;
     specsLabel: string;
     specs: Spec[];
-    card: {
-      title: string;
-      subtitle: string;
-      label: string;
-    };
-    imageAlt: string;
   };
   about: {
     title: string;
@@ -127,8 +121,6 @@ export type Dictionary = {
   languages: {
     title: string;
     items: LanguageItem[];
-    licenseLabel: string;
-    license: string;
   };
   hobbies: {
     title: string;
@@ -137,6 +129,7 @@ export type Dictionary = {
   contact: {
     title: string;
     text: string;
+    details: Spec[];
     emailLabel: string;
     linkedinLabel: string;
     githubLabel: string;

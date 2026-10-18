@@ -16,6 +16,14 @@ export function Contact({ content }: Props) {
     <Section id="contact" index={8} title={content.title}>
       <p className="max-w-2xl text-lg leading-relaxed text-pretty">{content.text}</p>
       <p className="mt-4 font-mono text-sm text-muted break-all">{profile.email}</p>
+      <dl className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        {content.details.map((detail) => (
+          <div key={detail.label} className="flex gap-2">
+            <dt className="font-mono text-xs uppercase tracking-wider text-muted">{detail.label}</dt>
+            <dd>{detail.value}</dd>
+          </div>
+        ))}
+      </dl>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <a
           href={`mailto:${profile.email}`}

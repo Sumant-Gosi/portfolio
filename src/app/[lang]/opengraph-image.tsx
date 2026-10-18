@@ -13,16 +13,16 @@ export function generateStaticParams() {
 }
 
 // Cached so the file read happens once at build time and the image stays static.
-async function carDataUrl() {
+async function photoDataUrl() {
   "use cache";
-  const car = await readFile(path.join(process.cwd(), "public/images/ecu-network.jpg"));
-  return `data:image/jpeg;base64,${car.toString("base64")}`;
+  const photo = await readFile(path.join(process.cwd(), "public/images/profile.jpg"));
+  return `data:image/jpeg;base64,${photo.toString("base64")}`;
 }
 
 export default async function OpengraphImage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const hero = getDictionary(hasLocale(lang) ? lang : "en").hero;
-  const carSrc = await carDataUrl();
+  const photoSrc = await photoDataUrl();
 
   return new ImageResponse(
     (
@@ -50,9 +50,9 @@ export default async function OpengraphImage({ params }: { params: Promise<{ lan
           </div>
         </div>
         <img
-          src={carSrc}
+          src={photoSrc}
           alt=""
-          width={714}
+          width={652}
           height={476}
           style={{ borderRadius: 16, border: "2px solid #253a4b" }}
         />
