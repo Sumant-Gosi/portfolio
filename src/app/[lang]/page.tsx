@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Hobbies } from "@/components/Hobbies";
 import { Hero } from "@/components/Hero";
 import { Languages } from "@/components/Languages";
+import { Licence } from "@/components/Licence";
 import { Projects } from "@/components/Projects";
 import { SkillFocus } from "@/components/SkillFocus";
 import { Skills } from "@/components/Skills";
@@ -36,6 +37,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Training content={dict.training} />
         <Languages content={dict.languages} />
         <Hobbies content={dict.hobbies} />
+        <Licence content={dict.licence} />
         <Contact content={dict.contact} />
       </main>
       <Footer content={dict.footer} />

@@ -41,7 +41,7 @@ export const de: Dictionary = {
     ],
   },
   about: {
-    title: "Profil",
+    title: "Der Mensch hinter dem Code.",
     paragraphs: [
       "Als Embedded Software Engineer bei der IAV GmbH entwickle, analysiere und integriere ich Steuergerätesoftware in einem Umfeld mit AUTOSAR, ASPICE und ISO 26262.",
       "Zuvor habe ich bei Robert Bosch in Indien an Software für das Motormanagement gearbeitet, von Anforderungen in IBM DOORS bis zu SiL- und HiL-Tests.",
@@ -50,7 +50,7 @@ export const de: Dictionary = {
     ],
   },
   skills: {
-    title: "Kenntnisse",
+    title: "Mein technischer Werkzeugkasten.",
     hint: "Wählen Sie eine Kenntnis aus, um zu sehen, wo ich sie eingesetzt habe.",
     focus: {
       usedIn: "eingesetzt in",
@@ -61,7 +61,7 @@ export const de: Dictionary = {
     },
   },
   experience: {
-    title: "Berufserfahrung",
+    title: "Mein beruflicher Werdegang.",
     currentLabel: "Aktuell",
     items: [
       {
@@ -107,13 +107,13 @@ export const de: Dictionary = {
     ],
   },
   projects: {
-    title: "Projekte",
+    title: "Projekte, die ich umgesetzt habe.",
     problemLabel: "Aufgabe",
     solutionLabel: "Lösung",
     githubLabel: "Auf GitHub ansehen",
   },
   training: {
-    title: "Aus- und Weiterbildung",
+    title: "Mein Bildungsweg.",
     educationTitle: "Studium",
     coursesTitle: "Weiterbildung",
     certificationsTitle: "Zertifizierungen",
@@ -152,7 +152,7 @@ export const de: Dictionary = {
     ],
   },
   hobbies: {
-    title: "Hobbys",
+    title: "Abseits vom Code.",
     items: [
       { id: "boardgames", name: "Brettspiele", detail: "7 Wonders, Catan, Azul" },
       { id: "swimming", name: "Schwimmen" },
@@ -160,12 +160,15 @@ export const de: Dictionary = {
       { id: "strength", name: "Krafttraining" },
     ],
   },
+  licence: {
+    title: "Führerschein",
+    value: "Klasse B",
+  },
   contact: {
-    title: "Kontakt",
+    title: "Lassen Sie uns ins Gespräch kommen.",
     text: "Ich bin offen für Positionen in ganz Deutschland. Schreiben Sie mir gern eine E-Mail oder vernetzen Sie sich mit mir auf LinkedIn.",
     details: [
       { label: "Standort", value: "Böblingen" },
-      { label: "Führerschein", value: "Klasse B" },
     ],
     emailLabel: "E-Mail schreiben",
     linkedinLabel: "LinkedIn",

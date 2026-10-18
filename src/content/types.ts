@@ -10,6 +10,7 @@ export type SectionId =
   | "training"
   | "languages"
   | "hobbies"
+  | "licence"
   | "contact";
 
 export type NavItem = {
@@ -125,6 +126,10 @@ export type Dictionary = {
   hobbies: {
     title: string;
     items: HobbyItem[];
+  };
+  licence: {
+    title: string;
+    value: string;
   };
   contact: {
     title: string;

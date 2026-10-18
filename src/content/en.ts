@@ -41,7 +41,7 @@ export const en: Dictionary = {
     ],
   },
   about: {
-    title: "About",
+    title: "The person behind the code.",
     paragraphs: [
       "I work as an embedded software engineer at IAV GmbH, where I develop, analyse and integrate ECU software in an AUTOSAR, ASPICE and ISO 26262 environment.",
       "Before that, I worked on engine management software at Robert Bosch in India, from requirements in IBM DOORS to SiL and HiL testing.",
@@ -50,7 +50,7 @@ export const en: Dictionary = {
     ],
   },
   skills: {
-    title: "Skills",
+    title: "My engineering toolkit.",
     hint: "Select a skill to see where I have used it.",
     focus: {
       usedIn: "used in",
@@ -61,7 +61,7 @@ export const en: Dictionary = {
     },
   },
   experience: {
-    title: "Experience",
+    title: "My professional journey.",
     currentLabel: "Current",
     items: [
       {
@@ -107,13 +107,13 @@ export const en: Dictionary = {
     ],
   },
   projects: {
-    title: "Projects",
+    title: "Things I've built and worked on.",
     problemLabel: "Problem",
     solutionLabel: "Solution",
     githubLabel: "View on GitHub",
   },
   training: {
-    title: "Training & Education",
+    title: "My learning journey.",
     educationTitle: "Education",
     coursesTitle: "Training",
     certificationsTitle: "Certifications",
@@ -152,7 +152,7 @@ export const en: Dictionary = {
     ],
   },
   hobbies: {
-    title: "Hobbies",
+    title: "Beyond the code.",
     items: [
       { id: "boardgames", name: "Board games", detail: "7 Wonders, Catan, Azul" },
       { id: "swimming", name: "Swimming" },
@@ -160,12 +160,15 @@ export const en: Dictionary = {
       { id: "strength", name: "Strength training" },
     ],
   },
+  licence: {
+    title: "Driving licence",
+    value: "Class B",
+  },
   contact: {
-    title: "Contact",
+    title: "Let's connect.",
     text: "I am open to roles across Germany. Send me an email or connect with me on LinkedIn.",
     details: [
       { label: "Location", value: "Böblingen, Germany" },
-      { label: "Driving licence", value: "Class B" },
     ],
     emailLabel: "Send an email",
     linkedinLabel: "LinkedIn",

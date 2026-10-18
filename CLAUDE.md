@@ -32,7 +32,7 @@ They spend under a minute on the page. Within that time they should understand: 
 4. **Experience**: timeline. IAV GmbH (current), Bosch India (previous), internship.
 5. **Projects**: cards with title, short problem/solution text, tech tags, and GitHub link (if available).
 6. **Training & Education**: Master's degree (thesis with AI/ML), Jacks Technologies AET4 (completed 2026), Python For Automotive (in progress 2026).
-7. **Languages**: English C1, German B2 (C1.2 course in progress). The driving licence (Class B) and location sit as a small details line in Contact, not under Languages.
+7. **Languages**: English C1, German B2 (C1.2 course in progress). The driving licence (Class B) has its own small section after Hobbies; the location sits as a details line in Contact.
 8. **Contact**: email button and LinkedIn link. No contact form needed.
 
 ## Content: Skills
