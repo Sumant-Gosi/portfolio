@@ -1,12 +1,19 @@
 import type { Dictionary } from "@/content/types";
+import { profile } from "@/content/profile";
 import { Avatar } from "./Avatar";
+import { GitHubIcon } from "./GitHubIcon";
+import { LinkedInIcon } from "./LinkedInIcon";
 
 type Props = {
   content: Dictionary["hero"];
+  links: Pick<Dictionary["contact"], "linkedinLabel" | "githubLabel">;
 };
 
 const buttonBase =
   "inline-flex h-12 items-center justify-center gap-2 rounded-lg px-6 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+
+const iconButton =
+  "inline-flex size-12 items-center justify-center rounded-lg border border-border text-fg transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 const iconProps = {
   className: "size-4",
@@ -19,7 +26,7 @@ const iconProps = {
   "aria-hidden": true,
 };
 
-export function Hero({ content }: Props) {
+export function Hero({ content, links }: Props) {
   return (
     <section aria-labelledby="hero-name" className="hero-glow border-b border-border">
       <div className="mx-auto grid max-w-6xl gap-14 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center">
@@ -52,7 +59,7 @@ export function Hero({ content }: Props) {
             ))}
           </ul>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href={content.cvFile}
               download
@@ -72,6 +79,28 @@ export function Hero({ content }: Props) {
                 <path d="M7 17 17 7M8 7h9v9" />
               </svg>
             </a>
+            <div className="flex gap-3">
+              <a
+                href={profile.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={links.linkedinLabel}
+                title={links.linkedinLabel}
+                className={iconButton}
+              >
+                <LinkedInIcon className="size-5" />
+              </a>
+              <a
+                href={profile.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={links.githubLabel}
+                title={links.githubLabel}
+                className={iconButton}
+              >
+                <GitHubIcon className="size-5" />
+              </a>
+            </div>
           </div>
 
           <p className="mt-6 flex items-center gap-2 text-sm text-muted">
