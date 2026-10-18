@@ -41,7 +41,7 @@ export const en: Dictionary = {
     ],
   },
   about: {
-    title: "Hello, I am Sumant.",
+    title: "Hello, I am Sumant",
     paragraphs: [
       "I work as an embedded software engineer at IAV GmbH, where I develop, analyse and integrate ECU software in an AUTOSAR, ASPICE and ISO 26262 environment.",
       "Before that, I worked on engine management software at Robert Bosch in India, from requirements in IBM DOORS to SiL and HiL testing.",
@@ -50,7 +50,7 @@ export const en: Dictionary = {
     ],
   },
   skills: {
-    title: "My engineering toolkit.",
+    title: "My engineering toolkit",
     hint: "Select a skill to see where I have used it.",
     focus: {
       usedIn: "used in",
@@ -61,7 +61,7 @@ export const en: Dictionary = {
     },
   },
   experience: {
-    title: "My professional journey.",
+    title: "My professional journey",
     currentLabel: "Current",
     viewDetails: "View details",
     panelLabel: "Role details",
@@ -116,7 +116,7 @@ export const en: Dictionary = {
     ],
   },
   projects: {
-    title: "Things I've built and worked on.",
+    title: "Things I've built and worked on",
     problemLabel: "Problem",
     solutionLabel: "Solution",
     githubLabel: "View on GitHub",
@@ -126,7 +126,7 @@ export const en: Dictionary = {
     close: "Close",
   },
   training: {
-    title: "My learning journey.",
+    title: "My learning journey",
     educationTitle: "Education",
     coursesTitle: "Training",
     certificationsTitle: "Certifications",
@@ -165,7 +165,7 @@ export const en: Dictionary = {
     ],
   },
   hobbies: {
-    title: "Off the clock.",
+    title: "Off the clock",
     items: [
       { id: "boardgames", name: "Board games", detail: "7 Wonders, Catan, Azul" },
       { id: "swimming", name: "Swimming" },
@@ -178,7 +178,7 @@ export const en: Dictionary = {
     value: "Class B",
   },
   contact: {
-    title: "Let's connect.",
+    title: "Let's connect",
     text: "I am open to roles across Germany. Send me an email or connect with me on LinkedIn.",
     details: [
       { label: "Location", value: "Böblingen, Germany" },

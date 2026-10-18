@@ -41,7 +41,7 @@ export const de: Dictionary = {
     ],
   },
   about: {
-    title: "Hallo, ich bin Sumant.",
+    title: "Hallo, ich bin Sumant",
     paragraphs: [
       "Als Embedded Software Engineer bei der IAV GmbH entwickle, analysiere und integriere ich Steuergerätesoftware in einem Umfeld mit AUTOSAR, ASPICE und ISO 26262.",
       "Zuvor habe ich bei Robert Bosch in Indien an Software für das Motormanagement gearbeitet, von Anforderungen in IBM DOORS bis zu SiL- und HiL-Tests.",
@@ -50,7 +50,7 @@ export const de: Dictionary = {
     ],
   },
   skills: {
-    title: "Mein technischer Werkzeugkasten.",
+    title: "Mein technischer Werkzeugkasten",
     hint: "Wählen Sie eine Kenntnis aus, um zu sehen, wo ich sie eingesetzt habe.",
     focus: {
       usedIn: "eingesetzt in",
@@ -61,7 +61,7 @@ export const de: Dictionary = {
     },
   },
   experience: {
-    title: "Mein beruflicher Werdegang.",
+    title: "Mein beruflicher Werdegang",
     currentLabel: "Aktuell",
     viewDetails: "Details ansehen",
     panelLabel: "Positionsdetails",
@@ -116,7 +116,7 @@ export const de: Dictionary = {
     ],
   },
   projects: {
-    title: "Projekte, die ich umgesetzt habe.",
+    title: "Projekte, die ich umgesetzt habe",
     problemLabel: "Aufgabe",
     solutionLabel: "Lösung",
     githubLabel: "Auf GitHub ansehen",
@@ -126,7 +126,7 @@ export const de: Dictionary = {
     close: "Schließen",
   },
   training: {
-    title: "Mein Bildungsweg.",
+    title: "Mein Bildungsweg",
     educationTitle: "Studium",
     coursesTitle: "Weiterbildung",
     certificationsTitle: "Zertifizierungen",
@@ -165,7 +165,7 @@ export const de: Dictionary = {
     ],
   },
   hobbies: {
-    title: "Nach Feierabend.",
+    title: "Nach Feierabend",
     items: [
       { id: "boardgames", name: "Brettspiele", detail: "7 Wonders, Catan, Azul" },
       { id: "swimming", name: "Schwimmen" },
@@ -178,7 +178,7 @@ export const de: Dictionary = {
     value: "Klasse B",
   },
   contact: {
-    title: "Lassen Sie uns ins Gespräch kommen.",
+    title: "Lassen Sie uns ins Gespräch kommen",
     text: "Ich bin offen für Positionen in ganz Deutschland. Schreiben Sie mir gern eine E-Mail oder vernetzen Sie sich mit mir auf LinkedIn.",
     details: [
       { label: "Standort", value: "Böblingen" },

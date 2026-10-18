@@ -15,6 +15,8 @@
   --accent-soft: rgb(14 116 144 / 0.1);
   --band: #eaeff4;
   --panel: #ffffff;
+  --panel-muted: #4a5a6a;
+  --panel-border: #d6dee6;
   --glow: rgb(14 116 144 / 0.12);
 }
 
@@ -31,7 +33,9 @@
     --accent-fg: #06161d;
     --accent-soft: rgb(85 196 216 / 0.12);
     --band: #15212d;
-    --panel: #1f3446;
+    --panel: #1e3a5f;
+    --panel-muted: #b4c3d2;
+    --panel-border: #34557a;
     --glow: rgb(85 196 216 / 0.16);
   }
 }
@@ -48,7 +52,9 @@
   --accent-fg: #06161d;
   --accent-soft: rgb(85 196 216 / 0.12);
   --band: #15212d;
-  --panel: #1f3446;
+  --panel: #1e3a5f;
+  --panel-muted: #b4c3d2;
+  --panel-border: #34557a;
   --glow: rgb(85 196 216 / 0.16);
 }
 
@@ -130,8 +136,11 @@ main > section:nth-of-type(even) {
   }
 }
 
-/* Side panel for role details: a modal <dialog> that slides in from the right. */
+/* Side panel for role and project details: a modal <dialog> that slides in from the right. */
 .drawer {
+  /* Steel blue in dark mode: text and borders inside get matching lighter tones. */
+  --muted: var(--panel-muted);
+  --border: var(--panel-border);
   position: fixed;
   inset: 0 0 0 auto;
   width: min(36rem, 100%);
