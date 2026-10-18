@@ -120,6 +120,10 @@ export const de: Dictionary = {
     problemLabel: "Aufgabe",
     solutionLabel: "Lösung",
     githubLabel: "Auf GitHub ansehen",
+    viewDetails: "Details ansehen",
+    panelLabel: "Projektdetails",
+    toolsTitle: "Tools & Kenntnisse",
+    close: "Schließen",
   },
   training: {
     title: "Mein Bildungsweg.",

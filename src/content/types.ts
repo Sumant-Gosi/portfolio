@@ -116,6 +116,10 @@ export type Dictionary = {
     problemLabel: string;
     solutionLabel: string;
     githubLabel: string;
+    viewDetails: string;
+    panelLabel: string;
+    toolsTitle: string;
+    close: string;
   };
   training: {
     title: string;
