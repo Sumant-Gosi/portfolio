@@ -10,10 +10,10 @@ type Props = {
 };
 
 const buttonBase =
-  "inline-flex h-12 items-center justify-center gap-2 rounded-lg px-6 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+  "inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg px-6 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
-const iconButton =
-  "inline-flex size-12 items-center justify-center rounded-lg border border-border text-fg transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+const outlined =
+  "border border-border text-fg hover:-translate-y-0.5 hover:border-accent hover:text-accent";
 
 const iconProps = {
   className: "size-4",
@@ -59,7 +59,8 @@ export function Hero({ content, links }: Props) {
             ))}
           </ul>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          {/* Equal-width buttons: one column on phones, one row of equal columns from sm up. */}
+          <div className="mt-9 grid gap-3 sm:inline-grid sm:auto-cols-fr sm:grid-flow-col">
             <a
               href={content.cvFile}
               download
@@ -71,36 +72,23 @@ export function Hero({ content, links }: Props) {
               {content.downloadCv}
             </a>
             <a
-              href="#projects"
-              className={`${buttonBase} border border-border text-fg hover:border-accent hover:text-accent`}
+              href={profile.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${buttonBase} ${outlined}`}
             >
-              {content.viewProjects}
-              <svg {...iconProps}>
-                <path d="M7 17 17 7M8 7h9v9" />
-              </svg>
+              <LinkedInIcon />
+              {links.linkedinLabel}
             </a>
-            <div className="flex gap-3">
-              <a
-                href={profile.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={links.linkedinLabel}
-                title={links.linkedinLabel}
-                className={iconButton}
-              >
-                <LinkedInIcon className="size-5" />
-              </a>
-              <a
-                href={profile.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={links.githubLabel}
-                title={links.githubLabel}
-                className={iconButton}
-              >
-                <GitHubIcon className="size-5" />
-              </a>
-            </div>
+            <a
+              href={profile.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${buttonBase} ${outlined}`}
+            >
+              <GitHubIcon />
+              {links.githubLabel}
+            </a>
           </div>
 
           <p className="mt-6 flex items-center gap-2 text-sm text-muted">

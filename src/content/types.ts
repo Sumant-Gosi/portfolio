@@ -81,7 +81,6 @@ export type Dictionary = {
     availability: string;
     keywords: string[];
     downloadCv: string;
-    viewProjects: string;
     cvFile: string;
     specsLabel: string;
     specs: Spec[];

@@ -30,7 +30,6 @@ export const en: Dictionary = {
     availability: "Open to roles across Germany",
     keywords: ["Embedded systems", "Model-based development", "Software integration"],
     downloadCv: "Download CV",
-    viewProjects: "View projects",
     cvFile: "/cv/Sumant_Gosi_CV_EN.pdf",
     specsLabel: "Profile at a glance",
     specs: [

@@ -29,8 +29,7 @@ export const de: Dictionary = {
       "Ich entwickle, teste und integriere Embedded Software für Fahrzeuge: von C-Code und AUTOSAR-Komponenten bis zu HiL-Prüfständen und CI-Pipelines.",
     availability: "Offen für Positionen in ganz Deutschland",
     keywords: ["Embedded Systems", "Modellbasierte Entwicklung", "Software-Integration"],
-    downloadCv: "Lebenslauf herunterladen",
-    viewProjects: "Projekte ansehen",
+    downloadCv: "Lebenslauf",
     cvFile: "/cv/Sumant_Gosi_CV_DE.pdf",
     specsLabel: "Profil auf einen Blick",
     specs: [

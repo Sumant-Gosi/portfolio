@@ -26,7 +26,7 @@ They spend under a minute on the page. Within that time they should understand: 
 - Fully responsive. Must look good on a phone, because recruiters often open links from LinkedIn on mobile.
 
 ## Page sections (single page with anchor navigation)
-1. **Hero**: title "Embedded Software Engineer | Automotive" as a small cyan eyebrow, name as the headline, one line summary, a keyword line, buttons "Download CV" (primary) and "View projects". Small line: "Open to roles across Germany". Right side: card with the profile photo (uncropped) and key facts.
+1. **Hero**: title "Embedded Software Engineer | Automotive" as a small cyan eyebrow, name as the headline, one line summary, a keyword line, equal-size buttons "Download CV" (primary), "LinkedIn" and "GitHub". Small line: "Open to roles across Germany". Right side: card with the profile photo (uncropped) and key facts.
 2. **About**: 3 to 4 short sentences. Automotive embedded software at IAV and Bosch, testing and integration, ASPICE and ISO 26262 environment, active upskilling.
 3. **Skills**: grouped tag cloud using the groups below. Each group is a card.
 4. **Experience**: timeline. IAV GmbH (current), Bosch India (previous), internship.
