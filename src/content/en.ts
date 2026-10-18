@@ -63,6 +63,11 @@ export const en: Dictionary = {
   experience: {
     title: "My professional journey.",
     currentLabel: "Current",
+    viewDetails: "View details",
+    panelLabel: "Role details",
+    responsibilitiesTitle: "Responsibilities",
+    toolsTitle: "Tools & skills",
+    close: "Close",
     items: [
       {
         role: "Embedded Software Engineer",
@@ -70,6 +75,8 @@ export const en: Dictionary = {
         location: "Sindelfingen, Germany",
         period: "Sep 2023 – present",
         current: true,
+        summary:
+          "Model-based software development, quality analysis and integration for powertrain ECUs, backed by test automation in Python and Jenkins.",
         points: [
           "Software development in MATLAB/Simulink for powertrain ECUs",
           "Model and code quality: MXAM guideline audits, static analysis with Lint (MISRA-C) and Polyspace",
@@ -84,6 +91,7 @@ export const en: Dictionary = {
         company: "Bosch Global Software Technologies",
         location: "Renningen, Germany",
         period: "Jun 2022 – Nov 2022",
+        summary: "Deployed deep neural networks on STM32 microcontrollers and benchmarked their inference latency.",
         points: [
           "Built a deployment pipeline for deep neural networks on an STM32 NUCLEO-F767ZI with STM32Cube.AI and Zephyr RTOS on Linux",
           "Integrated the toolchain into an AutoML neural architecture search framework with Azure cloud-to-device profiling",
@@ -96,6 +104,7 @@ export const en: Dictionary = {
         company: "Robert Bosch",
         location: "Bengaluru, India",
         period: "Aug 2019 – Mar 2021",
+        summary: "Requirements, development and testing of engine management air path functions in an ASPICE environment.",
         points: [
           "Software requirements engineering for engine management air path functions in IBM DOORS, including change request assessment and traceability",
           "Function development in ETAS ASCET on the MSR/AUTOSAR architecture, with MISRA checks on the generated C code",

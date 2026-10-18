@@ -127,6 +127,67 @@ main > section:nth-of-type(even) {
   }
 }
 
+/* Side panel for role details: a modal <dialog> that slides in from the right. */
+.drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(36rem, 100%);
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--border);
+  color: var(--fg);
+  background: var(--surface);
+  box-shadow: -24px 0 60px rgb(0 0 0 / 0.35);
+  /* The dialog itself takes focus on open; its buttons keep their own focus styles. */
+  outline: none;
+  translate: 100% 0;
+  transition:
+    translate 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    overlay 0.35s allow-discrete,
+    display 0.35s allow-discrete;
+}
+
+.drawer[open] {
+  translate: 0 0;
+}
+
+@starting-style {
+  .drawer[open] {
+    translate: 100% 0;
+  }
+}
+
+.drawer::backdrop {
+  background: rgb(5 10 15 / 0);
+  backdrop-filter: blur(0);
+  transition:
+    background 0.35s ease,
+    backdrop-filter 0.35s ease,
+    overlay 0.35s allow-discrete,
+    display 0.35s allow-discrete;
+}
+
+.drawer[open]::backdrop {
+  background: rgb(5 10 15 / 0.55);
+  backdrop-filter: blur(4px);
+}
+
+@starting-style {
+  .drawer[open]::backdrop {
+    background: rgb(5 10 15 / 0);
+    backdrop-filter: blur(0);
+  }
+}
+
+/* Keep the page from scrolling behind an open panel. */
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
 /* Skill focus: set by SkillFocus. Matching jobs and projects stay, the rest fades. */
 [data-skills] {
   transition:
@@ -155,7 +216,8 @@ main > section:nth-of-type(even) {
 
   *,
   *::before,
-  *::after {
+  *::after,
+  ::backdrop {
     transition-duration: 0.01ms !important;
   }
 }

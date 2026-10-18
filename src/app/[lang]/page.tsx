@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { DialogTriggers } from "@/components/DialogTriggers";
 import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -42,6 +43,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </main>
       <Footer content={dict.footer} hero={dict.hero} contact={dict.contact} />
       <SkillFocus content={dict.skills.focus} />
+      <DialogTriggers />
     </>
   );
 }

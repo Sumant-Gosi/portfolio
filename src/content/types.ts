@@ -29,6 +29,8 @@ export type ExperienceItem = {
   location: string;
   period: string;
   current?: boolean;
+  // One sentence for the card; the points appear in the details panel.
+  summary: string;
   points: string[];
   tags: string[];
 };
@@ -102,6 +104,11 @@ export type Dictionary = {
   experience: {
     title: string;
     currentLabel: string;
+    viewDetails: string;
+    panelLabel: string;
+    responsibilitiesTitle: string;
+    toolsTitle: string;
+    close: string;
     items: ExperienceItem[];
   };
   projects: {

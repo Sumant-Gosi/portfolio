@@ -63,6 +63,11 @@ export const de: Dictionary = {
   experience: {
     title: "Mein beruflicher Werdegang.",
     currentLabel: "Aktuell",
+    viewDetails: "Details ansehen",
+    panelLabel: "Positionsdetails",
+    responsibilitiesTitle: "Aufgaben",
+    toolsTitle: "Tools & Kenntnisse",
+    close: "Schließen",
     items: [
       {
         role: "Embedded Software Engineer",
@@ -70,6 +75,8 @@ export const de: Dictionary = {
         location: "Sindelfingen",
         period: "Sept. 2023 – heute",
         current: true,
+        summary:
+          "Modellbasierte Softwareentwicklung, Qualitätsanalyse und Integration für Antriebsstrang-Steuergeräte, ergänzt durch Testautomatisierung mit Python und Jenkins.",
         points: [
           "Softwareentwicklung mit MATLAB/Simulink für Antriebsstrang-Steuergeräte",
           "Modell- und Codequalität: Audits nach MXAM-Richtlinien, statische Analyse mit Lint (MISRA-C) und Polyspace",
@@ -84,6 +91,7 @@ export const de: Dictionary = {
         company: "Bosch Global Software Technologies",
         location: "Renningen",
         period: "Juni 2022 – Nov. 2022",
+        summary: "Deployment neuronaler Netze auf STM32-Mikrocontrollern und Messung ihrer Inferenzlatenz.",
         points: [
           "Aufbau einer Deployment-Pipeline für neuronale Netze auf einem STM32 NUCLEO-F767ZI mit STM32Cube.AI und Zephyr RTOS unter Linux",
           "Integration der Toolchain in ein AutoML-Framework zur Neural Architecture Search mit Azure-Cloud-to-Device-Profiling",
@@ -96,6 +104,7 @@ export const de: Dictionary = {
         company: "Robert Bosch",
         location: "Bengaluru, Indien",
         period: "Aug. 2019 – März 2021",
+        summary: "Anforderungen, Entwicklung und Test von Air-Path-Funktionen im Motormanagement in einem ASPICE-Umfeld.",
         points: [
           "Requirements Engineering für Air-Path-Funktionen im Motormanagement in IBM DOORS, inklusive Bewertung von Change Requests und Rückverfolgbarkeit",
           "Funktionsentwicklung in ETAS ASCET auf Basis der MSR/AUTOSAR-Architektur mit MISRA-Prüfung des generierten C-Codes",
