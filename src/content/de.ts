@@ -41,7 +41,7 @@ export const de: Dictionary = {
     ],
   },
   about: {
-    title: "Der Mensch hinter dem Code.",
+    title: "Hallo, ich bin Sumant.",
     paragraphs: [
       "Als Embedded Software Engineer bei der IAV GmbH entwickle, analysiere und integriere ich Steuergerätesoftware in einem Umfeld mit AUTOSAR, ASPICE und ISO 26262.",
       "Zuvor habe ich bei Robert Bosch in Indien an Software für das Motormanagement gearbeitet, von Anforderungen in IBM DOORS bis zu SiL- und HiL-Tests.",
@@ -152,7 +152,7 @@ export const de: Dictionary = {
     ],
   },
   hobbies: {
-    title: "Abseits vom Code.",
+    title: "Nach Feierabend.",
     items: [
       { id: "boardgames", name: "Brettspiele", detail: "7 Wonders, Catan, Azul" },
       { id: "swimming", name: "Schwimmen" },
