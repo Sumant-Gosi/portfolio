@@ -76,11 +76,17 @@ export type Dictionary = {
     title: string;
     summary: string;
     availability: string;
+    keywords: string[];
     downloadCv: string;
-    contact: string;
+    viewProjects: string;
     cvFile: string;
     specsLabel: string;
     specs: Spec[];
+    card: {
+      title: string;
+      subtitle: string;
+      label: string;
+    };
     imageAlt: string;
   };
   about: {

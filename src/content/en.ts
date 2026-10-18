@@ -28,8 +28,9 @@ export const en: Dictionary = {
     summary:
       "I develop, test and integrate automotive embedded software, from C code and AUTOSAR components to HiL benches and CI pipelines.",
     availability: "Open to roles across Germany",
+    keywords: ["Embedded systems", "Model-based development", "Software integration"],
     downloadCv: "Download CV",
-    contact: "Contact",
+    viewProjects: "View projects",
     cvFile: "/cv/Sumant_Gosi_CV_EN.pdf",
     specsLabel: "Profile at a glance",
     specs: [
@@ -38,6 +39,11 @@ export const en: Dictionary = {
       { label: "Standards", value: "AUTOSAR · ASPICE · ISO 26262" },
       { label: "Protocols", value: "CAN FD · UDS · XCP · DoIP" },
     ],
+    card: {
+      title: "Embedded automotive systems",
+      subtitle: "Hardware · Software · Integration",
+      label: "ECU network",
+    },
     imageAlt:
       "X-ray view of a sedan showing its ECU network: engine, body, transmission, gateway and ABS ECUs connected by bus lines",
   },

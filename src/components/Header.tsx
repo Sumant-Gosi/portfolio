@@ -27,9 +27,10 @@ export function Header({ locale, content }: Props) {
         <a
           href="#top"
           aria-label={content.homeLabel}
-          className="font-mono text-sm font-medium tracking-wider text-fg focus-visible:outline-2 focus-visible:outline-accent"
+          className="flex items-center gap-2.5 text-sm font-semibold uppercase tracking-[0.14em] text-fg focus-visible:outline-2 focus-visible:outline-accent"
         >
-          <span className="text-accent">&gt;</span> SG
+          <span className="size-2 rounded-full bg-accent" aria-hidden="true" />
+          Sumant Gosi
         </a>
 
         <nav aria-label={content.navLabel} className="hidden lg:block">

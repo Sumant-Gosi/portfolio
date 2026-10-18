@@ -28,8 +28,9 @@ export const de: Dictionary = {
     summary:
       "Ich entwickle, teste und integriere Embedded Software für Fahrzeuge: von C-Code und AUTOSAR-Komponenten bis zu HiL-Prüfständen und CI-Pipelines.",
     availability: "Offen für Positionen in ganz Deutschland",
+    keywords: ["Embedded Systems", "Modellbasierte Entwicklung", "Software-Integration"],
     downloadCv: "Lebenslauf herunterladen",
-    contact: "Kontakt",
+    viewProjects: "Projekte ansehen",
     cvFile: "/cv/Sumant_Gosi_CV_DE.pdf",
     specsLabel: "Profil auf einen Blick",
     specs: [
@@ -38,6 +39,11 @@ export const de: Dictionary = {
       { label: "Standards", value: "AUTOSAR · ASPICE · ISO 26262" },
       { label: "Protokolle", value: "CAN FD · UDS · XCP · DoIP" },
     ],
+    card: {
+      title: "Embedded-Systeme im Fahrzeug",
+      subtitle: "Hardware · Software · Integration",
+      label: "Steuergerätenetzwerk",
+    },
     imageAlt:
       "Röntgenansicht einer Limousine mit ihrem Steuergerätenetzwerk: Motor-, Karosserie-, Getriebe-, Gateway- und ABS-Steuergerät, verbunden über Busleitungen",
   },

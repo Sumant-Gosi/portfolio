@@ -21,12 +21,12 @@ They spend under a minute on the page. Within that time they should understand: 
 ## Design direction
 - Clean, technical, engineering feel. Think datasheet or oscilloscope, not startup landing page.
 - Dark mode and light mode, following system preference, with a toggle.
-- Deep navy base with one muted cyan accent (light mode: off-white with a teal-cyan accent). Use the accent only for buttons, links, active navigation and a few highlights.
+- Navy base with one cyan accent: background #101923, surface #1A2936, accent #55C4D8, text #F0F4F8 (light mode: off-white with a teal-cyan accent). Use the accent only for buttons, links, active navigation and a few highlights.
 - Fonts: Titillium Web for headings, Geist for body text, Geist Mono for small technical labels (protocol names, tool tags).
 - Fully responsive. Must look good on a phone, because recruiters often open links from LinkedIn on mobile.
 
 ## Page sections (single page with anchor navigation)
-1. **Hero**: name, title "Embedded Software Engineer | Automotive", one line summary, buttons "Download CV" and "Contact". Small line: "Open to roles across Germany".
+1. **Hero**: title "Embedded Software Engineer | Automotive" as a small cyan eyebrow, name as the headline, one line summary, a keyword line, buttons "Download CV" (primary) and "View projects". Small line: "Open to roles across Germany". Right side: card with the ECU network car illustration and key facts.
 2. **About**: 3 to 4 short sentences. Automotive embedded software at IAV and Bosch, testing and integration, ASPICE and ISO 26262 environment, active upskilling.
 3. **Skills**: grouped tag cloud using the groups below. Each group is a card.
 4. **Experience**: timeline. IAV GmbH (current), Bosch India (previous), internship.

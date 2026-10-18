@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
-/* Deep navy with one muted cyan accent. Light is the base. Dark applies via
-   system preference unless the user picked light, or via data-theme="dark". */
+/* Navy with one cyan accent (#101923 / #1A2936 / #55C4D8 / #F0F4F8). Light is the base.
+   Dark applies via system preference unless the user picked light, or via data-theme="dark". */
 :root {
   color-scheme: light;
-  --bg: #f5f7fa;
+  --bg: #f4f7fa;
   --surface: #ffffff;
-  --fg: #0f172a;
-  --muted: #4b5768;
-  --border: #d8dee8;
-  --grid: rgb(15 23 42 / 0.045);
+  --fg: #101923;
+  --muted: #4a5a6a;
+  --border: #d6dee6;
+  --grid: rgb(16 25 35 / 0.04);
   --accent: #0e7490;
   --accent-fg: #ffffff;
   --accent-soft: rgb(14 116 144 / 0.1);
@@ -18,29 +18,29 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0b1220;
-    --surface: #111b2e;
-    --fg: #e6edf6;
-    --muted: #94a3b8;
-    --border: #1e2a40;
-    --grid: rgb(230 237 246 / 0.04);
-    --accent: #5cc8e2;
-    --accent-fg: #04121c;
-    --accent-soft: rgb(92 200 226 / 0.12);
+    --bg: #101923;
+    --surface: #1a2936;
+    --fg: #f0f4f8;
+    --muted: #9daebf;
+    --border: #253a4b;
+    --grid: rgb(240 244 248 / 0.035);
+    --accent: #55c4d8;
+    --accent-fg: #06161d;
+    --accent-soft: rgb(85 196 216 / 0.12);
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0b1220;
-  --surface: #111b2e;
-  --fg: #e6edf6;
-  --muted: #94a3b8;
-  --border: #1e2a40;
-  --grid: rgb(230 237 246 / 0.04);
-  --accent: #5cc8e2;
-  --accent-fg: #04121c;
-  --accent-soft: rgb(92 200 226 / 0.12);
+  --bg: #101923;
+  --surface: #1a2936;
+  --fg: #f0f4f8;
+  --muted: #9daebf;
+  --border: #253a4b;
+  --grid: rgb(240 244 248 / 0.035);
+  --accent: #55c4d8;
+  --accent-fg: #06161d;
+  --accent-soft: rgb(85 196 216 / 0.12);
 }
 
 @theme inline {
