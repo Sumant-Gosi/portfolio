@@ -21,7 +21,7 @@ They spend under a minute on the page. Within that time they should understand: 
 ## Design direction
 - Clean, technical, engineering feel. Think datasheet or oscilloscope, not startup landing page.
 - Dark mode and light mode, following system preference, with a toggle.
-- Navy base with one cyan accent: background #101923, surface #1A2936, accent #55C4D8, text #F0F4F8 (light mode: off-white with a teal-cyan accent). Use the accent only for buttons, links, active navigation and a few highlights.
+- Navy base with one cyan accent: background #101923, surface #1A2936, accent #55C4D8, text #F0F4F8 (light mode: off-white with a teal-cyan accent). Use the accent only for buttons, links, active navigation and a few highlights. Exception: the three hero buttons use their own colours (Download CV green #15803D, LinkedIn blue #0A66C2, GitHub black #1F2328), all with white text.
 - Fonts: Titillium Web for headings, Geist for body text, Geist Mono for small technical labels (protocol names, tool tags).
 - Fully responsive. Must look good on a phone, because recruiters often open links from LinkedIn on mobile.
 

@@ -12,8 +12,11 @@ type Props = {
 const buttonBase =
   "inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-lg px-6 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
-const outlined =
-  "border border-border text-fg hover:-translate-y-0.5 hover:border-accent hover:text-accent";
+// Brand colours on purpose: green for the CV, LinkedIn blue and GitHub black, all with white text.
+const cvButton = "bg-[#15803d] text-white shadow-lg shadow-[#15803d]/25 hover:-translate-y-0.5 hover:bg-[#166534]";
+const linkedinButton = "bg-[#0a66c2] text-white shadow-lg shadow-[#0a66c2]/20 hover:-translate-y-0.5 hover:bg-[#004182]";
+const githubButton =
+  "border border-transparent bg-[#1f2328] text-white shadow-lg shadow-black/20 hover:-translate-y-0.5 hover:bg-black dark-border";
 
 const iconProps = {
   className: "size-4",
@@ -64,7 +67,7 @@ export function Hero({ content, links }: Props) {
             <a
               href={content.cvFile}
               download
-              className={`${buttonBase} bg-accent text-accent-fg shadow-lg shadow-accent/20 hover:-translate-y-0.5 hover:shadow-accent/30`}
+              className={`${buttonBase} ${cvButton}`}
             >
               <svg {...iconProps}>
                 <path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
@@ -75,7 +78,7 @@ export function Hero({ content, links }: Props) {
               href={profile.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${buttonBase} ${outlined}`}
+              className={`${buttonBase} ${linkedinButton}`}
             >
               <LinkedInIcon />
               {links.linkedinLabel}
@@ -84,7 +87,7 @@ export function Hero({ content, links }: Props) {
               href={profile.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${buttonBase} ${outlined}`}
+              className={`${buttonBase} ${githubButton}`}
             >
               <GitHubIcon />
               {links.githubLabel}

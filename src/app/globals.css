@@ -196,6 +196,17 @@ main > section:nth-of-type(even) {
   }
 }
 
+/* Near-black buttons (GitHub) get a light edge in dark mode so they stay visible on navy. */
+:root[data-theme="dark"] .dark-border {
+  border-color: rgb(240 244 248 / 0.22);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .dark-border {
+    border-color: rgb(240 244 248 / 0.22);
+  }
+}
+
 /* Keep the page from scrolling behind an open panel. */
 html:has(dialog[open]) {
   overflow: hidden;
