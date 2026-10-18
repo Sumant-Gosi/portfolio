@@ -140,6 +140,9 @@ export type Dictionary = {
     githubLabel: string;
   };
   footer: {
+    tagline: string;
+    linksLabel: string;
+    backToTop: string;
     builtWith: string;
   };
 };

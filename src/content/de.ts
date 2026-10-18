@@ -175,6 +175,9 @@ export const de: Dictionary = {
     githubLabel: "GitHub",
   },
   footer: {
+    tagline: "Embedded Software für Steuergeräte im Fahrzeug, von der Entwicklung über den Test bis zur Integration.",
+    linksLabel: "Kontakt und Links",
+    backToTop: "Nach oben",
     builtWith: "Erstellt mit Next.js und Tailwind CSS",
   },
 };

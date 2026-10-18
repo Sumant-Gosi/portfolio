@@ -40,7 +40,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Licence content={dict.licence} />
         <Contact content={dict.contact} />
       </main>
-      <Footer content={dict.footer} />
+      <Footer content={dict.footer} hero={dict.hero} contact={dict.contact} />
       <SkillFocus content={dict.skills.focus} />
     </>
   );

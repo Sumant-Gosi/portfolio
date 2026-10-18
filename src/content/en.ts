@@ -175,6 +175,9 @@ export const en: Dictionary = {
     githubLabel: "GitHub",
   },
   footer: {
+    tagline: "Embedded software for automotive ECUs, from development and testing to integration.",
+    linksLabel: "Contact and links",
+    backToTop: "Back to top",
     builtWith: "Built with Next.js and Tailwind CSS",
   },
 };

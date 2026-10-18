@@ -21,7 +21,7 @@ const iconProps = {
 
 export function Hero({ content }: Props) {
   return (
-    <section aria-labelledby="hero-name" className="graticule border-b border-border">
+    <section aria-labelledby="hero-name" className="hero-glow border-b border-border">
       <div className="mx-auto grid max-w-6xl gap-14 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:items-center">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">

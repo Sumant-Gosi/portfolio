@@ -13,6 +13,8 @@
   --accent: #0e7490;
   --accent-fg: #ffffff;
   --accent-soft: rgb(14 116 144 / 0.1);
+  --band: #eaeff4;
+  --glow: rgb(14 116 144 / 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +29,8 @@
     --accent: #55c4d8;
     --accent-fg: #06161d;
     --accent-soft: rgb(85 196 216 / 0.12);
+    --band: #15212d;
+    --glow: rgb(85 196 216 / 0.16);
   }
 }
 
@@ -41,6 +45,8 @@
   --accent: #55c4d8;
   --accent-fg: #06161d;
   --accent-soft: rgb(85 196 216 / 0.12);
+  --band: #15212d;
+  --glow: rgb(85 196 216 / 0.16);
 }
 
 @theme inline {
@@ -86,12 +92,16 @@ body {
   color: var(--fg);
 }
 
-/* Oscilloscope style graticule behind the hero. */
-.graticule {
+/* Soft accent glow behind the hero photo card. */
+.hero-glow {
   background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 32px 32px;
+    radial-gradient(42rem circle at 78% 42%, var(--glow), transparent 62%),
+    radial-gradient(30rem circle at 8% 0%, var(--glow), transparent 70%);
+}
+
+/* Every second section sits on a slightly different band, for rhythm while scrolling. */
+main > section:nth-of-type(even) {
+  background: var(--band);
 }
 
 /* Theme toggle shows the icon of the mode it switches to. */
